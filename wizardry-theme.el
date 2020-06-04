@@ -521,6 +521,17 @@
 
   ;;; External Packages
 
+  ;; Circe
+  (circe-fool-face               (:strike-through t))
+  (circe-highlight-nick-face     (:weight 'bold))
+  (circe-my-message-face         (:foreground fg :background bg))
+  (circe-originator-face         (:foreground fg :background bg))
+  (circe-prompt-face             (:foreground fg :background bg))
+  (circe-server-face             (:foreground c7 :background bg))
+  (circe-topic-diff-new-face     (:foreground c1 :background bg))
+  (circe-topic-diff-removed-face (:foreground c2 :background bg))
+
+
   ;; Counsel
   (counsel--mark-ring-highlight    (:foreground c4 :slant 'italic))
   (counsel-active-mode             (:foreground c2))
