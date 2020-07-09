@@ -714,8 +714,8 @@
   (transient-value                    (:foreground fg))
 
   ;; Mini Modeline
-  (mini-modeline-mode-line          (:height 0.1 :background c8))
-  (mini-modeline-mode-line-inactive (:height 0.1 :background c8))
+  (mini-modeline-mode-line          (:height 0.1 :background bg))
+  (mini-modeline-mode-line-inactive (:height 0.1 :background bg))
 
   ;; mu4e
   (mu4e-attach-number               (:foreground c5 :slant 'italic))
