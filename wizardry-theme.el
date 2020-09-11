@@ -96,8 +96,8 @@
   ;; Other UI elements
   (button                     (:foreground fg :background bg :box t))
   (cursor                     (:background fg :background bg))
-  (link                       (:foreground c5 :underline t))
-  (link-visited               (:foreground c5 :underline t))
+  (link                       (:foreground fg :underline t))
+  (link-visited               (:foreground fg :underline t))
   (mouse                      (:foreground fg :background bg))
   (mouse-drag-and-drop-region (:foreground fg :background c8))
   (tty-menu-disabled-face     (:foreground fg :background bg :strike-through t))
@@ -112,7 +112,7 @@
   (nobreak-space              (:foreground c7))
 
   ;; Search items
-  (isearch                    (:background c4))
+  (isearch                    (:foreground bg :background fg))
   (isearch-fail               (:foreground c1))
   (lazy-highlight             (:underline t))
 
@@ -155,7 +155,7 @@
   (diary-anniversary       (:foreground c3 :background bg))
   (diary-button            (:foreground fg :background bg :box t))
   (diary-time              (:foreground fg :background bg))
-  (holiday                 (:foreground c5 :background bg))
+  (holiday                 (:foreground fg :background bg))
 
   ;; Compilation
   (compilation-column-number  (:foreground fg))
@@ -232,14 +232,14 @@
 
   ;; Dired
   (dired-directory   (:foreground fg :weight 'bold))
-  (dired-flagged     (:foreground c1))
+  (dired-flagged     (:foreground fg :strike-through t))
   (dired-header      (:foreground fg :weight 'bold))
   (dired-ignored     (:foreground c7))
-  (dired-mark        (:foreground c5 :slant 'italic))
-  (dired-marked      (:foreground c5 :slant 'italic))
+  (dired-mark        (:foreground fg :slant 'italic))
+  (dired-marked      (:foreground fg :slant 'italic))
   (dired-perm-write  (:foreground fg))
-  (dired-symlink     (:foreground c3))
-  (dired-warning     (:foreground c3 :weight 'bold))
+  (dired-symlink     (:foreground fg))
+  (dired-warning     (:foreground fg :weight 'bold))
 
   ;; Ediff mode
   (ediff-current-diff-A        (:foreground fg :background c8))
@@ -466,10 +466,10 @@
   (smerge-refined-removed (:foreground c1 :background c8))
   (smerge-upper           (:foreground c1 :background bg))
 
-  ;; ;; TODO Tab bar
-  ;; (tab-bar              (:foreground fg :background c8))
-  ;; (tab-bar-tab          (:foreground fg :background c8))
-  ;; (tab-bar-tab-inactive (:foreground c7 :background c8))
+  ;; TODO Tab bar
+  (tab-bar              (:foreground fg :background bg :box t))
+  (tab-bar-tab          (:foreground fg :background bg))
+  (tab-bar-tab-inactive (:foreground fg :background bg))
 
   ;; Terminal
   (term                (:foreground fg :background bg))
@@ -501,12 +501,12 @@
   (whitespace-empty             (:foreground c8 :background c8))
   (whitespace-hspace            (:foreground c8 :background c8))
   (whitespace-indentation       (:foreground c8 :background c8))
-  (whitespace-line              (:foreground c8 :background c8))
+  (whitespace-line              (:foreground c8 :background bg))
   (whitespace-newline           (:foreground c8 :background c8))
   (whitespace-space             (:foreground c8 :background c8))
   (whitespace-space-after-tab   (:foreground c8 :background c8))
   (whitespace-space-before-tab  (:foreground c8 :background c8))
-  (whitespace-tab               (:foreground c8 :background c8))
+  (whitespace-tab               (:foreground c8 :background bg))
   (whitespace-trailing          (:foreground c8 :background c8))
 
   ;; widget
@@ -774,9 +774,9 @@
   (org-agenda-restriction-lock    (:foreground c3))
   (org-agenda-structure           (:foreground c7))
   (org-archived                   (:foreground c7))
-  (org-block                      (:foreground fg :background c0))
-  (org-block-begin-line           (:foreground fg :background bg :weight 'bold))
-  (org-block-end-line             (:foreground fg :background bg :weight 'bold))
+  (org-block                      (:foreground fg :background c0 :extend t))
+  (org-block-begin-line           (:foreground fg :background c8 :slant 'italic :extend t))
+  (org-block-end-line             (:foreground fg :background c8 :slant 'italic :extend t))
   (org-checkbox                   (:foreground fg))
   (org-checkbox-statistics-done   (:foreground c2))
   (org-checkbox-statistics-todo   (:foreground c1))
@@ -789,7 +789,7 @@
   (org-default                    (:foreground fg :background bg))
   (org-document-info              (:foreground c7))
   (org-document-info-keyword      (:foreground c7))
-  (org-document-title             (:foreground fg :weight 'bold))
+  (org-document-title             (:foreground fg :slant 'italic))
   (org-done                       (:foreground c2 :slant 'italic))
   (org-drawer                     (:foreground c7))
   (org-ellipsis                   (:foreground c7))
@@ -816,10 +816,10 @@
   (org-level-6                    (:foreground fg))
   (org-level-7                    (:foreground fg))
   (org-level-8                    (:foreground fg))
-  (org-link                       (:foreground c4 :underline t))
+  (org-link                       (:foreground fg :underline t))
   (org-list-dt                    (:foreground fg :weight 'bold))
   (org-macro                      (:foreground fg))
-  (org-meta-line                  (:foreground c7))
+  (org-meta-line                  (:foreground fg :background bg :slant 'italic))
   (org-mode-line-clock            (:foreground fg))
   (org-mode-line-clock-overrun    (:foreground c1 :weight 'bold))
   (org-priority                   (:foreground c5))
