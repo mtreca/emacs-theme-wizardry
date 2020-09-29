@@ -85,10 +85,10 @@
   (window-divider-last-pixel  (:foreground fg :background bg))
 
   ;; Header line and mode line
-  (header-line                (:foreground fg :background bg :underline t))
-  (header-line-highlight      (:foreground fg :background bg :underline t))
   (mode-line                  (:foreground fg :background bg :overline t :underline t))
   (mode-line-buffer-id        (:foreground fg :background bg))
+  (header-line                (:foreground fg :background bg :underline t :extend t))
+  (header-line-highlight      (:foreground fg :background bg :underline t :extend t))
   (mode-line-emphasis         (:foreground c4 :background bg))
   (mode-line-highlight        (:foreground c4 :background bg))
   (mode-line-inactive         (:foreground fg :background bg :overline t :underline t))
@@ -548,6 +548,11 @@
   (counsel-outline-8               (:foreground fg :background bg))
   (counsel-outline-default         (:foreground fg :background bg))
   (counsel-variable-documentation  (:foreground fg :background bg))
+
+  ;; Dired Async
+  (dired-async-failure              (:foreground c1))
+  (dired-async-message              (:foreground fg))
+  (dired-async-mode-message         (:foreground fg))
 
   ;; Elfeed
   (elfeed-log-date                  (:foreground fg))
